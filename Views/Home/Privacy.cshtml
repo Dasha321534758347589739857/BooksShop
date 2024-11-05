@@ -1,10 +1,12 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Privacy";
+}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>METANIT.COM</title>
+    <script src="~/js/site.js" type="text/javascript"></script>
     <style>
         td {
             padding: 1px;
@@ -29,18 +31,242 @@
             <input id="userPassword" />
         </p>
         <p>
+            Роль:<br />
+            <select id="userRole" >
+                <option>-</option>
+            </select>
+        </p>
+        <p>
             <button id="saveBtn">Сохранить</button>
             <button id="resetBtn">Сбросить</button>
+            
         </p>
     </div>
     <table>
-        <thead><tr><th>Имя</th><th>Пароль</th><th></th></tr></thead>
+        <thead><tr><th>Имя</th><th>Пароль</th><th>Роль</th><th></th></tr></thead>
         <tbody>
+           
         </tbody>
     </table>
 
+    <script type="text/javascript" charset="utf-8" width=500px>
+        let res = document.getElementById('GFG');
+        let select = document.getElementById("userRole");
 
-    <script src="@Url.Content("~/js/site.js")" type="text/javascript"></script>
+        async function getUsers() {
+            // отправляет запрос и получаем ответ
+            const response = await fetch("/Home/Privacy/api/users", {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+            // если запрос прошел нормально
+            if (response.ok === true) {
+                // получаем данные
+                const users = await response.json();
+                const rows = document.querySelector("tbody");
+                // добавляем полученные элементы в таблицу
+                users.forEach(user => rows.append(row(user)));
+            }
+        }
+        async function getRoles() {
+            // отправляет запрос и получаем ответ
+            const response = await fetch("/Home/Privacy/api/roles", {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+
+
+            
+            if (response.ok === true) {
+                // получаем данные
+                const roles = await response.json();        
+                let elmts = [];
+                roles.forEach(role => elmts.push(role));
+                for (let i = 0; i < elmts.length; i++) {
+                    let optn = elmts[i];
+                    let el = document.createElement("option");
+                    el.textContent = optn.name;
+                    el.value =optn;
+                    select.appendChild(el);
+                }
+                             
+            }
+        }
+
+        // let res = document.getElementById('GFG');
+        // let select = document.getElementById("userRole");
+        // let elmts = roles;
+
+        // Main function
+        // function GFG_Fun() {
+        //     for (let i = 0; i < elmts.length; i++) {
+        //         let optn = elmts[i];
+        //         let el = document.createElement("option");
+        //         el.textContent = optn;
+        //         el.value = optn;
+        //         select.appendChild(el);
+        //     }
+            
+        // }
+
+        // Получение одного пользователя
+        async function getUser(id) {
+            const response = await fetch(`/Home/Privacy/api/users/${id}`, {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok === true) {
+                const user = await response.json();
+                document.getElementById("userId").value = user.id;
+                document.getElementById("userName").value = user.name;
+                document.getElementById("userPassword").value = user.password;
+                document.getElementById("userRole").value = user.role;
+            }
+            else {
+                // если произошла ошибка, получаем сообщение об ошибке
+                const error = await response.json();
+                console.log(error.message); // и выводим его на консоль
+            }
+        }
+        // Добавление пользователя
+        async function createUser(userName, userPassword, userRole, userId) {
+
+            const response = await fetch("/Home/Privacy/api/users", {
+                method: "POST",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: userId,
+                    name: userName,
+                    password: userPassword,
+                    role:
+                        {
+                        id:userRole.id,
+                        name: userRole.name
+                        }
+                    
+                })
+            });
+            if (response.ok === true) {
+                const user = await response.json();
+                document.querySelector("tbody").append(row(user));
+            }
+            else {
+                const error = await response.json();
+                console.log(error.message);
+            }
+        }
+        // Изменение пользователя
+        async function editUser(userId, userName, userPassword, userRole) {
+            const response = await fetch("/Home/Privacy/api/users", {
+                method: "PUT",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: userId,
+                    name: userName,
+                    password: userPassword,
+                    role: userRole
+                })
+            });
+            if (response.ok === true) {
+                const user = await response.json();
+                document.querySelector(`tr[data-rowid='${user.id}']`).replaceWith(row(user));
+            }
+            else {
+                const error = await response.json();
+                console.log(error.message);
+            }
+        }
+        // Удаление пользователя
+        async function deleteUser(id) {
+            const response = await fetch(`/Home/Privacy/api/users/${id}`, {
+                method: "DELETE",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok === true) {
+                const user = await response.json();
+                document.querySelector(`tr[data-rowid='${user.id}']`).remove();
+            }
+            else {
+                const error = await response.json();
+                console.log(error.message);
+            }
+        }
+
+        // сброс данных формы после отправки
+        function reset() {
+            document.getElementById("userId").value =
+                document.getElementById("userName").value =
+                document.getElementById("userPassword").value = 
+                document.getElementById("userRole").value = "";
+                }
+        // создание строки для таблицы
+        function row(user) {
+
+            const tr = document.createElement("tr");
+            tr.setAttribute("data-rowid", user.id);
+
+            const nameTd = document.createElement("td");
+            nameTd.append(user.name);
+            tr.append(nameTd);
+
+            const passwordTd = document.createElement("td");
+            passwordTd.append(user.password);
+            tr.append(passwordTd);
+
+            const roleTd = document.createElement("td");
+            roleTd.append(user.role);
+            tr.append(roleTd);
+
+            const linksTd = document.createElement("td");
+
+            const editLink = document.createElement("button");
+            editLink.append("Изменить");
+            editLink.addEventListener("click", async () => await getUser(user.id));
+            linksTd.append(editLink);
+
+            const removeLink = document.createElement("button");
+            removeLink.append("Удалить");
+            removeLink.addEventListener("click", async () => await deleteUser(user.id));
+
+            linksTd.append(removeLink);
+            tr.appendChild(linksTd);
+
+            return tr;
+        }
+        // сброс значений формы
+        document.getElementById("resetBtn").addEventListener("click", () => reset());
+
+        // отправка формы
+        document.getElementById("saveBtn").addEventListener("click", async () => {
+
+            const id = document.getElementById("userId").value;
+            const name = document.getElementById("userName").value;
+            const password = document.getElementById("userPassword").value;
+            const role = document.getElementById("userRole").value;
+            if (id === "")
+                await createUser(name, password, role);
+            else
+                await editUser(id, name, password, role);
+            reset();
+        });
+       
+
+        // загрузка пользователей
+        getUsers();
+        getRoles();
+
+
+
+        
+    </script>
+
+
+    
+
+        
+
+    
+    
 
 </body>
 </html>
