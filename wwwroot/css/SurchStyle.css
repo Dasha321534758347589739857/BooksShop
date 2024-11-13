@@ -1,0 +1,141 @@
+﻿#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 6%;
+    float: left; /* горизонтальное положение */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    padding: 0;
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color: bisque;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+h2 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+html {
+    align-items: center;
+    width: 90%;
+}
+
+
+body {
+    background-color: black; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    width: 90%;
+    min-height: 700px;
+    margin-left: 15%;
+    margin-right: auto;
+    border-radius: 10px;
+    color: burlywood;
+}
+.search-form {
+    display: block;
+    width: 200px;
+    background: #F9F0DA;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-form_txt {
+    width: 140px;
+    height: 10%;
+    padding-left: 5%;
+    border: none;
+    font-style: italic;
+    outline: none;
+    background: #F9F0DA;
+    color: black;
+}
+
+.search-form_btn {
+    position: initial;
+    width: auto;
+    height: 5%;
+    margin-top: -0.5%;
+    margin-right: 0%;
+    float: right;
+    background: burlywood;
+    font-style: italic;
+}
+td {
+    padding: 2px;
+    font-style: italic;
+    
+}
+
+img {
+    max-height: 100%;
+    max-width: 90%;
+}
+
+
+.contur {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    /*border: 50px solid black;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    color: burlywood;
+    font-style: italic;
+    text-align: center;
+}

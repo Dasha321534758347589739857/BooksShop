@@ -1,0 +1,147 @@
+﻿html {
+    align-items: center;
+    width: 100%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: inherit;
+    background: black; /* Фоновый цвет и фоновый рисунок*/
+    color: bisque; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    background-size: 100%;
+    font-style: italic;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+a {
+    color: antiquewhite;
+}
+
+#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 8%;
+    float: left; /* горизонтальное положение */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    padding: 0;
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color: bisque;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+.row1 {
+    width: 50%;
+    column-gap: 12px;
+    text-align: left;
+}
+
+.row {
+    width: 30%;
+}
+
+.ramka {
+    border: 10px solid black;
+}
+
+h2 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 30px;
+    margin-left: 20%;
+    margin-right: auto;
+    text-align: center;
+    border: 2px solid burlywood;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: auto;
+    column-gap: 50px;
+    margin-left: 15%;
+    margin-right: auto;
+    text-align: left;
+}
+
+button {
+    background: burlywood;
+    font-style: italic;
+    color: black;
+    margin:1px;
+}
+
+.ustala {
+    background: #F9F0DA;
+    font-style: italic;
+}
+
+td {
+    padding: 1px;
+}
+

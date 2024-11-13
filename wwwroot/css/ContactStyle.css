@@ -1,0 +1,166 @@
+﻿#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left: 13%;
+    margin-right: auto;
+    margin-top: 5%;
+    float: left; /* горизонтальное положение */
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    max-width: 900px;
+    padding: 0;
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color: #6F4F28;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+html {
+    background: #000;
+    background-size: 120%;
+    width: 90%;
+    height: auto;
+}
+
+
+body {
+    background-color: burlywood; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    width: 80%;
+    height: auto;
+    margin-left: 15%;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 50px;
+    padding: 26px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: #6F4F28; /* Цвет линии для остальных браузеров */
+    background-color: #6F4F28; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+}
+
+h2 {
+    display: block;
+    background-color: #6F4F28;
+    color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+}
+
+p {
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    border: 2px #6F4F28;
+    border-style: solid none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rejim {
+    align-items: center;
+    padding: 5%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px #6F4F28;
+    border-style: solid none;
+    flex-direction: row;
+}
+
+    .rejim span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.inf {
+    align-items: center;
+    padding: 5%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px #6F4F28;
+    border-style: solid none;
+    flex-direction: row;
+}
+
+    .inf span {
+        margin-left: auto;
+        margin-right: auto;
+    }

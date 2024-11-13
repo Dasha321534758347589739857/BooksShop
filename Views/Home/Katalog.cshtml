@@ -9,7 +9,7 @@
     <!--основные данные-->
     <meta charset="UTF-8"><!--метаданные(кодировка)-->
     <title>Каталог</title><!--задаём заголовок страницы-->
-
+    <link rel="stylesheet" href="~/css/KatalogStyle.css"/>
 
 </head>
 <body>
@@ -21,100 +21,25 @@
         Выберите жанр литературы, который вас интересует:
     </p>
     <div class="katalog_books">
-        <button class="button">Фантастика</button>
-        <button class="button">Детективы</button>
-        <button class="button">Романы</button>
-        <button class="button">Классика</button>
-        <button class="button">Триллеры</button>
-        <button class="button">Поэзия</button>
-        <button class="button">Эротика</button>
-        <button class="button">Научное</button>
-        <button class="button">Другое</button>
+        <button class="button" id="FanButton">Фантастика</button>
+        <button class="button" id="DetButton">Детективы</button>
+        <button class="button" id = "RomButton">Романы</button>
+        <button class="button" id="KlassButton">Классика</button>
+        <button class="button" id="TrillButton">Триллеры</button>
+        <button class="button" id="PoeButton">Поэзия</button>
+        <button class="button" id="EroButton">Эротика</button>
+        <button class="button" id="ScienButton">Научное</button>
+        <button class="button" id="AnoButton">Другое</button>
     </div>
-    <style>
-        html {
-            background: #000 url(books.jpg);
-            background-size: 120%;
-            width: 90%;
-            height: 800px;
-        }
+    <table class="contur">
+        <thead><tr><th></th><th></th><th></th><th></th></tr></thead>
+        <tbody id="sbooks">
+        </tbody>
+    </table>
 
+   
 
-        body {
-            background-color: burlywood; /*Цвет текста на странице*/
-            background-attachment: fixed; /*Фон страницы фиксируется */
-            width: 80%;
-            height: 700px;
-            margin-left: 15%;
-            margin-right: auto;
-            border-radius: 10px;
-        }
-
-        h1 {
-            display: block;
-            color: #6F4F28;
-            font-style: italic;
-            font-size: 50px;
-            padding: 26px;
-            border-radius: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        hr {
-            border: none; /* Убираем границу для браузера Firefox */
-            color: #6F4F28; /* Цвет линии для остальных браузеров */
-            background-color: #6F4F28; /* Цвет линии для браузера Firefox и Opera */
-            height: 2px; /* Толщина линии */
-        }
-
-        p {
-            display: block;
-            color: #6F4F28;
-            font-style: italic;
-            font-size: 25px;
-            margin-top: -30px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        .katalog_books {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            flex-basis: 30%;
-            margin-top: 70px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            height: auto;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            row-gap: 80px;
-            column-gap: 30px;
-        }
-
-        .button {
-            background-color: burlywood;
-            ;
-            width: 30%;
-            height: 20%;
-            padding: 25px;
-            color: #6F4F28;
-            border: 2px solid#6F4F28;
-            font-style: italic;
-            font-size: 20px;
-        }
-
-            .button:hover {
-                background-color: #6F4F28;
-                color: burlywood;
-                ;
-            }
-    </style>
+    <script type="text/javascript" src="~/js/KatalogJs.js"></script>
 
 </body>
+</html>

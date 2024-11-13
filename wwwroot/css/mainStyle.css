@@ -1,12 +1,12 @@
 ﻿
-}
+
 a {
     color: antiquewhite;
 }
 #css-menu ul {
     list-style: none; /*задаём все свойства стиля списка */
     font: bold 100% Open Sans;
-    /*font-size: 200%;*/
+    font-size: 100%;
     font-style: italic; /* размер шрифта */
     margin-left: auto;
     margin-right: auto;
@@ -93,7 +93,7 @@ a {
     position: initial;
     width: 10%;
     float:right;    
-    border: none;
+   
     background: burlywood;
     font-style: italic;
    
@@ -232,27 +232,103 @@ img {
     }
 }
 
-/*@media all and (max-width:450px) {
-    h1 {
-        font-size: 50px;
-    }
+html {
+    display: table;
+    margin: auto;
+}
 
-    .search-form_txt {
-        max-width: 77%;
-    }
+html, body {
+    height: 100%;
+}
 
-    .search-form_btn {
-        width: 20px;
-    }
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: #000 url(image/books.jpg); /* Фоновый цвет и фоновый рисунок*/
+    color: bisque; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    background-size: 100%;
+    font-family: Verdana,sans-serif;
+    font-style: italic;
+}
 
-    #css-menu ul li {
-        max-width: 100px;
-        font-size: 10px;
-    }
-}*/
-/*
-@media all and (max-width:340px) {
-    .search-form_txt {
-        max-width: 67%;
-    }
-}*/
+h1 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p {
+    color: bisque;
+}
+
+.text {
+    font-size: 7%;
+    font-style: italic;
+    font-family: Verdana,sans-serif;
+    font-style: italic;
+}
+
+footer {
+    position: relative; /*относительное позиционирование*/
+    width: 100%; /*на всю ширину*/
+    display: flex;
+    justify-content: center; /*в центре по горизонтали*/
+    align-items: flex-end; /*внизу по вертикали*/
+    flex-direction: initial;
+    margin-top: 100px; /*отступ сверху*/
+}
+
+
+html {
+    display: table;
+    margin: auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: #000 url(../image/books.jpg); /* Фоновый цвет и фоновый рисунок*/
+    color: bisque; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    background-size: 100%;
+    font-family: Verdana,sans-serif;
+    font-style: italic;
+}
+
+h1 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p {
+    color: bisque;
+}
+
+.text {
+    font-size: 7%;
+    font-style: italic;
+    font-family: Verdana,sans-serif;
+    font-style: italic;
+}
+
+footer {
+    position: relative; /*относительное позиционирование*/
+    width: 100%; /*на всю ширину*/
+    display: flex;
+    justify-content: center; /*в центре по горизонтали*/
+    align-items: flex-end; /*внизу по вертикали*/
+    flex-direction: initial;
+    margin-top: 100px; /*отступ сверху*/
+}

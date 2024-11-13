@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Books";
+}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+    <link rel="stylesheet" href="~/css/BooksStyle.css" />
+
+  </head>
+
+<body>
+    <h2>Книги</h2>
+    <div class="container">
+        <div class="row1">
+            <div class="col-xs-12">
+                <p>Список книг:</p>
+                <table>
+                    <thead><tr><th class="ramka">Изображение</th><th class="ramka">Название</th><th class="ramka">Описание</th><th class="ramka">Автор</th><th class="ramka">Жанр</th><th></th></tr></thead>
+                    <tbody id="tbooks">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <p>Добавление книги:</p>
+
+                <input type="hidden" id="bookId" />
+
+                <p>
+                    Название:<br />
+
+
+                    <input id="bookName" class="ustala" />
+
+                </p>
+                <p>
+                    Описание:<br />
+                    <input id="bookDesc" class="ustala" />
+                </p>
+                <p>
+                    Автор:<br />
+                    <input id="bookAuthor" class="ustala"/>
+                </p>
+                <p>
+                    Изображение:<br />
+
+
+                    <input id="bookImg" class="ustala" />
+
+                </p>
+                <p>
+                    Жанр:<br />
+                    <input id="bookGenre" class="ustala" />
+                </p>
+                <p>
+                    <button id="saveBtn">Сохранить</button>
+                    <button id="resetBtn">Сбросить</button>
+                   
+
+                </p>
+            </div>
+
+       </div>
+
+    </div>
+
+    <script type="text/javascript" src="~/js/BooksJst.js"></script>
+ 
+  </body>
+</html>

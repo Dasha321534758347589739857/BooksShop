@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BooksShop</title>
    
-    @*  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />  *@
+     
+    @* <link rel="stylesheet" href="~/css/ContactStyle.css"> *@
+
+
    @*  <link rel="stylesheet" href="~/css/mainStyle.css" asp-append-version="true" /> *@
     @* <link rel="stylesheet" href="~/BooksShop.styles.css" asp-append-version="true" /> *@
 </head>
@@ -13,31 +16,31 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Главная</a> *@
+               @*  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"> *@
+                   @*  <span class="navbar-toggler-icon"></span>
+                </button> *@
                 <div id="css-menu">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Information">Иноформация</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Katalog">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Information">Information</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacts">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Katalog">Katalog</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Вход</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacts">Contacts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Roles">Roles</a>
-                        </li>
+                       
+                        
                     </ul>
                 </div>
             </div>
@@ -49,6 +52,8 @@
         </main>
     </div>
     <script src="~/js/site.js" asp-append-version="true"></script>
+   
+   
   @*   <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script> *@

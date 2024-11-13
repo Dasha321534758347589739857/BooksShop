@@ -1,0 +1,160 @@
+﻿html {
+    align-items: center;
+
+    width: 100%;
+    
+}
+
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: black; /* Фоновый цвет и фоновый рисунок*/
+    color: bisque; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    background-size: 100%;
+    font-style: italic;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+a {
+    color: antiquewhite;
+}
+
+#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: 6%;
+    float: left; /* горизонтальное положение */
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    padding: 0;
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color: bisque;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+h2 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 30px;
+    margin-left: 35%;
+    margin-right: auto;
+    text-align: center;
+    border: 2px solid burlywood;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: auto;
+    column-gap: 50px;
+    margin-left: 15%;
+    margin-right: auto;
+    text-align:left;
+}
+
+button {
+    background: burlywood;
+    font-style: italic;
+    color: black;
+    
+}
+
+.ustala {
+    background: #F9F0DA;
+    font-style:italic;
+}
+
+
+
+.search-form {
+    width: 90%;
+    background: #F9F0DA;
+}
+.search-form_txt {
+    width: 70%;
+    height: 10%;
+    padding-left: 5%;
+    border: none;
+    font-style: italic;
+    outline: none;
+    background: #F9F0DA;
+    color: black;
+}
+.search-form_btn {
+    position: initial;
+    width: 16%;
+    height: 5%;
+    margin-top: -0.5%;
+    margin-right: 0%;
+    float: right;
+    background: burlywood;
+    font-style: italic;
+}
+
+img {
+    vertical-align: baseline;
+}
+td {
+    padding: 1px;
+}
+
+button {
+    margin: 1px;
+}

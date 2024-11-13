@@ -1,0 +1,132 @@
+﻿
+
+.pricol {
+    visibility: hidden;
+    
+    padding: 10px;
+}
+html {
+    background: #000 url(../image/books.jpg);
+    background-size: 120%;
+    width: 90%;
+    height: auto;
+}
+
+
+body {
+    background-color: burlywood; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    width: 80%;
+    min-height: 80%;
+    margin-left: 15%;
+    margin-right: auto;
+    border-radius: 10px;
+    
+}
+p {
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 10px solid burlywood;
+}
+#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left: 13%;
+    margin-right: auto;
+    margin-top: 5%;
+    float: left; /* горизонтальное положение */
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    max-width: 900px;
+    padding: 0;
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color: #6F4F28;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+h2 {
+    
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 30px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+button {
+    background: burlywood;
+    font-style: italic;
+    color: black;
+     
+}
+.ustala {
+    background: #F9F0DA;
+    font-style: italic;
+   
+}
+
+.buttonsCont {
+    margin-left: 42%;
+    margin-right: auto;
+}
+.buttonsUs {
+    margin-left: 44%;
+    margin-right: auto;
+    border: 20px solid burlywood;
+}

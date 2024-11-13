@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Surch";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="~/css/SurchStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        td {
+            padding: 1px;
+        }
+
+        button {
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Книги</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+               
+                <p>Поиск книг:</p>
+                <div class="search-form" id="searchBook">
+                    <input class="search-form_txt" id="searchBookT" type="text" placeholder="Искать..">
+                    <button class="search-form_btn" id="searchBtn" type="button">
+                        <img src="~/image/img.png"
+                             width="10 px" height="10 px"
+                             alt="image">
+                    </button>
+                </div>
+                <p>Найденные книги:</p>
+                <table class="contur" id="Tsbooks">
+                    <thead><tr><th></th><th></th><th></th><th></th></tr></thead>
+                    <tbody id="sbooks">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+     </div>
+
+    <script type="text/javascript" src="~/js/SurchJS.js"></script>
+</body>
+</html>

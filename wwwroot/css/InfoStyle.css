@@ -1,0 +1,142 @@
+﻿
+
+
+
+a {
+    color: antiquewhite;
+}
+
+#css-menu ul {
+    list-style: none; /*задаём все свойства стиля списка */
+    font: bold 100% Open Sans;
+    font-size: 100%;
+    font-style: italic; /* размер шрифта */
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 5%;
+    float: left; /* горизонтальное положение */
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    max-width: 900px;
+    padding: 0;
+   
+}
+
+    #css-menu ul li {
+        display: flex;
+        margin-top: 10px;
+        float: left;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+    }
+
+        #css-menu ul li a {
+            flex-wrap: wrap;
+            flex-basis: auto;
+            display: flex;
+            text-decoration: none;
+            color:black;
+            width: 100%;
+        }
+
+            #css-menu ul li a span {
+                display: flex;
+            }
+
+
+
+            #css-menu ul li a:hover span.text-top {
+                transform: scale(1.2);
+                color: wheat;
+            }
+
+                #css-menu ul li a:hover span.text-top a {
+                    transform: scale(1.2);
+                }
+
+a {
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+
+h2 {
+    display: block;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+span {
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 20px;
+    padding: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+img {
+    display: block;
+    padding: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content:center;
+    max-width:50%;
+}
+
+
+html {
+    width: 100%;
+    background: #000;
+    background-size: 100%;
+}
+
+body {
+    background-color: burlywood; /*Цвет текста на странице*/
+    background-attachment: fixed; /*Фон страницы фиксируется */
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    display: block;
+    color: #6F4F28;
+    font-style: italic;
+    font-size: 50px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: #6F4F28; /* Цвет линии для остальных браузеров */
+    background-color: #6F4F28; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+}
+
+
+
+
+
